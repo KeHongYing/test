@@ -1,7 +1,7 @@
 # CSX2018DjangoClass
 ***
 ## Introduction Myself
-###   <Esc> Hello, I'm KeHongYing. I'm a sophomore and major in Computer Science and Information Engineering.
+### <Cr>Hello, I'm KeHongYing. I'm a sophomore and major in Computer Science and Information Engineering.
 ***
 ## Week1
 >  In Class:
