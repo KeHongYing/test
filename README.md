@@ -19,7 +19,7 @@
 
 >>  ii. Learn how to face and conquer the pressure from coding
 
->>  iii. Use resources on the internet to self-learning more frequently
+>>  iii. Use resources on the Internet to learn more frequently
 
 ##  Homework:
 
