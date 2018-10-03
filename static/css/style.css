@@ -12,6 +12,7 @@
     body{
 		background-image: url("./image/3-141103102R9.jpg");
 		background-repeat: no-repeat;
+		background-attachment: fixed;
 		background-position: center center;
 		background-size: cover;
 	}
@@ -91,7 +92,7 @@
     }
  
     .msg {
-        width: 73%;
+        width: 90%;
         display: inline-block;
         color: white;
         padding: 5px 0 5px 10px;

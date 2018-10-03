@@ -13,11 +13,25 @@
 <body>
     <h1>Welcome to HongYing's Webside</h1>
 	<h2>ID : B06902074</h2>
-    <p id="board">Message Board<br></p>
+    <p id="board">Picture Board<br></p>
+    <div id="container">
+        <div id="picture">
+            <div class="pic">
+                {% for picture in random %}
+                    <img src={{picture}} width=150 height=150>
+                {% endfor %}
+                <!-- There is no comment, type something to give some feedback. -->
+                <!-- <div> -->
+                   <!-- <img src="https://picsum.photos/200/200/?image=408" alt = test> -->
+                   <!-- <img src="https://images.unsplash.com/photo-1536228767230-783ad0b61dd9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c89d5a12f9cfc95dcda865d1e971d3a8&auto=format&fit=crop&w=1950&q=80" width = 100 height= 100 alt = test> -->
+                <!-- </div> -->
+            </div>
+        </div>
+    <p id="board">Messege Board<br></p>
     <div id="container">
         <div id="content">
             <div class="msg">
-                There is no comment, type something to give some feedback.
+                There is no comment, say something to give some feedback. And share some photo with us!
             </div>
         </div>
         <div id="send-box">
