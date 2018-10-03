@@ -23,7 +23,14 @@
 
 ## Week3
 > In Class:
+>> i. Learn how to use template to simplfy the html code
 
+>> ii. Start to discuss with others to solve the problem
+
+>> iii. Start to acomplish assignment without TA's template
+
+> At Home:
+>> i. Learn how to change the word style
 
 ##  Homework:
 
