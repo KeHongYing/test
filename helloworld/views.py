@@ -41,5 +41,5 @@ def index(request):
 	'https://images.unsplash.com/photo-1537246239611-d0661025f2de?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=9bb284a583e599c06a42d7d87d1dee9c&auto=format&fit=crop&w=600&q=60',
 	]
 	r = random.sample(pictures, 20)
-	context = {"pictures" : pictures, "random" : r, "my_picture" : ["../templates/temp.jpg"]}
+	context = {"pictures" : pictures, "random" : r}
 	return HttpResponse(template.render(context, request))
