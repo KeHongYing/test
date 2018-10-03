@@ -21,6 +21,10 @@
 
 >>  iii. Use resources on the Internet to learn more frequently
 
+## Week3
+> In Class:
+
+
 ##  Homework:
 
 > Link: https://kehelloworldtest.herokuapp.com/
