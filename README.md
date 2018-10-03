@@ -13,6 +13,14 @@
 
 >>  iii. Learn how to use Heroku and git
 
+## Week2
+>  In Class:
+>>  i. Learn how to push and pull the file from Github
+
+>>  ii. Learn how to face and conquer the pressure from coding
+
+>>  iii. Use resources on the Internet to learn more frequently
+
 ##  Homework:
 
 > Link: https://kehelloworldtest.herokuapp.com/
