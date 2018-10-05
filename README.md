@@ -32,6 +32,13 @@
 > At Home:
 >> i. Learn how to change the word style
 
+## Week 4
+>In class:
+>> i. Start to touch and learn how to add something into SQL data base
+
+>> ii. Use template to modify the code
+
+
 ##  Homework:
 
 > Link: https://kehelloworldtest.herokuapp.com/

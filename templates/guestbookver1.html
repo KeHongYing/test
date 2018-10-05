@@ -18,9 +18,12 @@
     <div id="container">
         <div id="picture">
             <div class="pic">
-                {% for picture in random %}
-                    <img src={{picture}} width=150 height=150>
+                {% for p in pic %}
+                    <img src={{p}} width=150 height=150>
                 {% endfor %}
+                <!-- {% for picture in random %} -->
+                    <!-- <img src={{picture}} width=150 height=150> -->
+                <!-- {% endfor %} -->
                 <!-- There is no comment, type something to give some feedback. -->
                 <!-- <div> -->
                    <!-- <img src="https://picsum.photos/200/200/?image=408" alt = test> -->
@@ -32,7 +35,13 @@
     <div id="container">
         <div id="content">
             <div class="msg">
-                There is no comment, say something to give some feedback. And share some photo with us!
+                {% for msg in msgs %}
+                <div class='msg'>
+                    <span class="name">{{msg.talker}}</span>
+                    {{msg.message}}
+                </div>
+                {% endfor %}
+                <!-- There is no comment, say something to give some feedback. And share some photo with us! -->
             </div>
         </div>
         <div id="send-box">

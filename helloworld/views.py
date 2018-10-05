@@ -4,6 +4,8 @@ from django.contrib import auth
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.template import loader
+from guestbook.models import TextMessage
+from guestbook.models import PictureMessage
 import random
 
 def index(request):
@@ -42,4 +44,17 @@ def index(request):
 	]
 	r = random.sample(pictures, 20)
 	context = {"pictures" : pictures, "random" : r}
-	return HttpResponse(template.render(context, request))
+
+	t1 = TextMessage.objects.create(talker = 'Micheal', message = 'Hello Professor!')
+	t2 = TextMessage.objects.create(talker = 'Ken', message = 'Hello Professor!')
+	t3 = TextMessage.objects.create(talker = 'Clinton', message = 'Hello Professor!')
+	
+	msgs = TextMessage.objects.all()
+
+
+	for i in range(20):
+		PictureMessage.objects.create(link = r[i])
+
+	pic = PictureMessage.objects.all()
+	#return HttpResponse(template.render(context, request))
+	return render(request, 'guestbookver1.html', locals())
