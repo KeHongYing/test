@@ -10,6 +10,6 @@ class TextMessage(models.Model):
 		return self.talker + " " + self.message
 
 class PictureMessage(models.Model):
-	link = models.CharField(max_length = 2147483647)
+	link = models.CharField(max_length = 10000000)
 	def __str__(self):
 		return self.link
