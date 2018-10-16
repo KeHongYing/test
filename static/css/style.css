@@ -23,6 +23,7 @@
 
     #ps{
         color:red;
+        font-size: 30px;
     }
 
     h1,h2{
@@ -73,7 +74,7 @@
 
     #name, #msg, #submit{
         margin: 10px;
-        font-size: 15px;
+        font-size: 25px;
     }
     input[name="name"] {
         width: 10%;

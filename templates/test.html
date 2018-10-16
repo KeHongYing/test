@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+	{% load  staticfiles %}
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>留言板</title>
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+	<style>
+	</style>
+</head>
+<body>
+    <h1>Welcome to HongYing's Webside</h1>
+	<h2>ID : B06902074</h2>
+    <p id="board">Messege Board<br></p>
+    <div id="container">
+        <div id="content">
+            <div class="msg">
+                <!-- <p>{{rec}}</p> -->
+                {% for r in rec %}
+                <div class='msg'>
+                    <span class="name">{{r.talker}}</span>
+                    <span>{{r.message}}</span>
+                    <span>{{r.time}}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="send-box">
+            <form id="send-form">
+                <form action="/test/" method = "get">
+                    <input type="text" name="names" id="names" placeholder="nickname">
+                    <input type="text" name="msgs" id="msgs" placeholder="say something">
+                    <input type="submit" id="submit" value="send">
+                </form>
+            </form>
+            <span id='ps'>Ps : Say something let me know ~</span>
+        </div>
+    </div>
+</body>
+
+</html>

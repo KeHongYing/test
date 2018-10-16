@@ -6,7 +6,9 @@ from django.contrib.auth.models import User
 from django.template import loader
 from guestbook.models import TextMessage
 from guestbook.models import PictureMessage
+from guestbook.models import reaction
 import random
+import time
 
 def index(request):
 	template = loader.get_template('guestbookver1.html')
@@ -58,3 +60,17 @@ def index(request):
 	pic = PictureMessage.objects.all()
 	#return HttpResponse(template.render(context, request))
 	return render(request, 'guestbookver1.html', locals())
+
+def test(request):
+	if 'names' in request.GET:
+		a = list(time.gmtime())
+		s = str(a[0]) + '/' + str(a[1]) + '/' + str(a[2]) + ' ' + str(a[3]) + ':' + str(a[4]) + ':' + str(a[5])
+		reaction.objects.create(talker = request.GET['names'], message = request.GET['msgs'] , time = s)
+	rec = reaction.objects.all()
+	return render(request, 'test.html', locals())
+
+def home(request):
+	template = loader.get_template('home.html')
+	url = ['https://kehelloworldtest.herokuapp.com/tset', 'https://kehelloworldtest.herokuapp.com/my_space']
+	context = {"url" : url}
+	return HttpResponse(template.render(context, request))

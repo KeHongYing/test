@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh">
+	{% load  staticfiles %}
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>留言板</title>
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+	<style>
+	</style>
+</head>
+<body>
+    <h1>Welcome to HongYing's Webside</h1>
+	<h2>ID : B06902074</h2>
+    <h2>
+        {% for u in url %}
+            <a href="{{u}}">link</a>
+        {% endfor %}
+    </h2>   
+</body>
+
+</html>
