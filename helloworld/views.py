@@ -71,6 +71,6 @@ def test(request):
 
 def home(request):
 	template = loader.get_template('home.html')
-	url = ['https://kehelloworldtest.herokuapp.com/tset', 'https://kehelloworldtest.herokuapp.com/my_space']
+	url = ['https://kehelloworldtest.herokuapp.com/test', 'https://kehelloworldtest.herokuapp.com/my_space']
 	context = {"url" : url}
 	return HttpResponse(template.render(context, request))
