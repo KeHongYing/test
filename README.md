@@ -33,13 +33,13 @@
 >> i. Learn how to change the word style
 
 ## Week 4
->In class:
+> In class:
 >> i. Start to touch and learn how to add something into SQL data base
 
 >> ii. Use template to modify the code
 
 ## Week 5
->In class:
+> In class:
 >> i. Realize the framework of the database(import v.s. migrate)
 
 >> ii. Learn how to use pgadmin to control my database(local and remote). But I can't use pgadmin, so I just use migration to send the whole database to heroku.
@@ -49,6 +49,16 @@
 
 >> ii. Start to use linux system to solve problem that is unsolvale on windows.
 
+## Week 6
+>In class:
+>> i. Set the environment completely in linux system.
+
+>> ii. Share some problem with others.
+
+> At home:
+>> i. Learn how the login system work on the django.
+
+>> ii. Set a very simple login system and try to register the superuser.
 
 ##  Homework:
 
