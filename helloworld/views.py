@@ -1,12 +1,15 @@
-from django.shortcuts import render,redirect   # 加入 redirect 套件
+from django.shortcuts import render,redirect,render_to_response   # 加入 redirect 套件
 from django.contrib.auth import authenticate
 from django.contrib import auth
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.template import loader
 from guestbook.models import TextMessage
 from guestbook.models import PictureMessage
 from guestbook.models import reaction
+from django.contrib import auth
+from django.template import RequestContext
+
 import random
 import time
 
@@ -63,7 +66,7 @@ def index(request):
 
 def test(request):
 	if 'names' in request.GET:
-		a = list(time.gmtime())
+		a = list(time.localtime())
 		s = str(a[0]) + '/' + str(a[1]) + '/' + str(a[2]) + ' ' + str(a[3]) + ':' + str(a[4]) + ':' + str(a[5])
 		reaction.objects.create(talker = request.GET['names'], message = request.GET['msgs'] , time = s)
 	rec = reaction.objects.all()
@@ -74,3 +77,29 @@ def home(request):
 	url = ['https://kehelloworldtest.herokuapp.com/test', 'https://kehelloworldtest.herokuapp.com/my_space']
 	context = {"url" : url}
 	return HttpResponse(template.render(context, request))
+
+def hello(request):
+    return render_to_response('hello.html',locals())
+
+
+def login(request):
+    if request.user.is_authenticated: 
+        return HttpResponseRedirect('/hello/')
+
+    username = request.POST.get('username', '')
+    password = request.POST.get('password', '')
+    #print(type(username))
+    #print(type(password))
+    user = auth.authenticate(username=username, password=password)
+
+    if  user is not None and user.is_active:
+        auth.login(request, user) #maintain the state of login
+        return HttpResponseRedirect('/hello/')
+    elif username == 'guest' and password == 'guest':
+        return HttpResponseRedirect('/hello/')
+    else:
+        return render_to_response('login.html')
+
+def logout(request):
+    auth.logout(request)
+    return HttpResponseRedirect('/login/')

@@ -13,11 +13,15 @@
 <body>
     <h1>Welcome to HongYing's Webside</h1>
 	<h2>ID : B06902074</h2>
-    <h2>
-        {% for u in url %}
-            <a href="{{u}}">link</a>
-        {% endfor %}
-    </h2>   
+    {% if request.user.is_authenticated %}
+        <h2>
+            <a href="/test/">Message Board</a>
+            <a href="/my_space/">My Space</a>
+        </h2>
+    {% else %}
+        <h1>Please login first!!!<br></h1>
+        <h1><a href="/login/">Click here for login ~</a></h1>
+    {% endif %}   
 </body>
 
 </html>
