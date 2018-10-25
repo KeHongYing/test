@@ -38,6 +38,17 @@
 
 >> ii. Use template to modify the code
 
+## Week 5
+>In class:
+>> i. Realize the framework of the database(import v.s. migrate)
+
+>> ii. Learn how to use pgadmin to control my database(local and remote). But I can't use pgadmin, so I just use migration to send the whole database to heroku.
+
+> At Home:
+>> i. Learning Interactive Web Design and Implement
+
+>> ii. Start to use linux system to solve problem that is unsolvale on windows.
+
 
 ##  Homework:
 
