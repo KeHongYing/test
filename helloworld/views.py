@@ -95,8 +95,6 @@ def login(request):
     if  user is not None and user.is_active:
         auth.login(request, user) #maintain the state of login
         return HttpResponseRedirect('/hello/')
-    elif username == 'guest' and password == 'guest':
-        return HttpResponseRedirect('/hello/')
     else:
         return render_to_response('login.html')
 
